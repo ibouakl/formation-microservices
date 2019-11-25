@@ -13,10 +13,29 @@ git version
 ``` bash
     <dependency>
         <groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
 ```
 
 ### B.2. Enable Eureka Client 
 
 Add the annotation @EnableEurekaClient to TrackerApiApplication
+
+## C. Config server
+
+### C.1. Add this dependency to the POM
+
+``` bash
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-config-server</artifactId>
+    </dependency>
+```
+
+### C.2. Enable Config Server 
+
+Add the annotation @EnableConfigServer to TrackerConfigApplication
+
+### C.3. Register to eureka
+
+Add the annotation @EnableEurekaClient to TrackerConfigApplication
