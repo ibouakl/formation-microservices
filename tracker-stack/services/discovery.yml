@@ -5,7 +5,7 @@ services:
   discovery:
     image: tracker-discovery
     ports:
-      - "8761"
+      - "8761:8761"
     restart: unless-stopped
 
   config:
