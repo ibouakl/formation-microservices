@@ -4,8 +4,8 @@
 ``` bash
 git version
 ```
-> git version 2.15.1 (Apple Git-101)   
-
+> git version 2.16.2.windows.1
+   
 ## B. Netflix eureka
 
 ### B.1. Add this dependency to the POM
