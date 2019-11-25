@@ -11,3 +11,6 @@ services:
   tracker-api:
     depends_on:
       - config
+  api-gateway:
+    depends_on:
+      - config

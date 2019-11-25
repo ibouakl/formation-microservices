@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  api-gateway:
+    image: api-gateway
+    ports:
+      - "8750:8750"
+    restart: unless-stopped
+
+  tracker-api:
+    depends_on:
+      - api-gateway
