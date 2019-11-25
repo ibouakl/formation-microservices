@@ -13,13 +13,13 @@ git version
 ``` bash
     <dependency>
         <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
     </dependency>
 ```
 
-### B.2. Enable Eureka Client 
+### B.2. Enable Eureka Server 
 
-Add the annotation @EnableEurekaClient to TrackerApiApplication
+Add the annotation @@EnableEurekaServer to Application.java
 
 ## C. Config server
 
@@ -43,7 +43,7 @@ Add the annotation @EnableConfigServer to TrackerConfigApplication
 
 ### C.3. Register to eureka
 
-Add the annotation @EnableEurekaClient to TrackerConfigApplication
+Add the annotation @EnableEurekaClient to TrackerConfigApplication.java
 
 ## D. Netflix zuul
 
@@ -68,11 +68,11 @@ Add the annotation @EnableEurekaClient to TrackerConfigApplication
 
 ### D.2. Enable Zuul 
 
-Add the annotation @EnableZuulProxy to ApiGatewayApplication
+Add the annotation @EnableZuulProxy to ApiGatewayApplication.java
 
 ### D.3. Register to eureka
 
-Add the annotation @EnableEurekaClient to ApiGatewayApplication
+Add the annotation @EnableEurekaClient to ApiGatewayApplication.java
 
 ### D.4. Configuration of routes
 ``` bash
