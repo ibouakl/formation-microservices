@@ -12,7 +12,11 @@ git version
 
 ``` bash
     <dependency>
-	    <groupId>org.springframework.cloud</groupId>
+        <groupId>org.springframework.cloud</groupId>
 		<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-	</dependency>
+    </dependency>
 ```
+
+### B.2. Enable Eureka Client 
+
+Add the annotation @EnableEurekaClient to TrackerApiApplication
