@@ -23,9 +23,14 @@ Add the annotation @EnableEurekaClient to TrackerApiApplication
 
 ## C. Config server
 
-### C.1. Add this dependency to the POM
+### C.1. Add dependencies to the POM
 
 ``` bash
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-config-server</artifactId>
+    </dependency>
+
     <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-config-server</artifactId>
