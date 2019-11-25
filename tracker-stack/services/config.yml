@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+  config:
+    image: tracker-config
+    ports:
+      - "8888"
+    restart: unless-stopped
