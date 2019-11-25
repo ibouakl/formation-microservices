@@ -11,6 +11,3 @@ services:
   config:
     depends_on:
       - discovery
-  tracker-api:
-    depends_on:
-      - discovery
