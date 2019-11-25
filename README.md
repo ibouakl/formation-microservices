@@ -33,7 +33,7 @@ Add the annotation @EnableEurekaClient to TrackerApiApplication
 
     <dependency>
         <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-config-server</artifactId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
 ```
 
@@ -44,3 +44,32 @@ Add the annotation @EnableConfigServer to TrackerConfigApplication
 ### C.3. Register to eureka
 
 Add the annotation @EnableEurekaClient to TrackerConfigApplication
+
+## D. Netflix-zuul
+
+### D.1. Add dependencies to the POM
+
+``` bash
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+```
+
+### C.2. Enable Zuul 
+
+Add the annotation @EnableZuulProxy to ApiGatewayApplication
+
+### C.3. Register to eureka
+
+Add the annotation @EnableEurekaClient to ApiGatewayApplication
