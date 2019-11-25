@@ -45,7 +45,7 @@ Add the annotation @EnableConfigServer to TrackerConfigApplication
 
 Add the annotation @EnableEurekaClient to TrackerConfigApplication
 
-## D. Netflix-zuul
+## D. Netflix zuul
 
 ### D.1. Add dependencies to the POM
 
@@ -66,10 +66,18 @@ Add the annotation @EnableEurekaClient to TrackerConfigApplication
     </dependency>
 ```
 
-### C.2. Enable Zuul 
+### D.2. Enable Zuul 
 
 Add the annotation @EnableZuulProxy to ApiGatewayApplication
 
-### C.3. Register to eureka
+### D.3. Register to eureka
 
 Add the annotation @EnableEurekaClient to ApiGatewayApplication
+
+### D.4. Configuration of routes
+``` bash
+zuul.routes.series.path= /tracker-api/v1/**
+zuul.routes.series.serviceId= tracker-api
+zuul.routes.series.stripPrefix= false
+zuul.routes.series.sensitive-headers: Cookie,Set-Cookie,Authorization
+```
