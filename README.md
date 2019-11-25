@@ -19,7 +19,7 @@ git version
 
 ### B.2. Enable Eureka Server 
 
-Add the annotation @@EnableEurekaServer to Application.java
+Add the annotation @EnableEurekaServer to Application.java
 
 ## C. Config server
 
