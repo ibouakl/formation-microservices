@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  config:
+    image: tracker-config
+    ports:
+      - "8888:8888"
+    restart: unless-stopped
+
+  tracker-api:
+    depends_on:
+      - config
+  api-gateway:
+    depends_on:
+      - config

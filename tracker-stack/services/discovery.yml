@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  discovery:
+    image: tracker-discovery
+    ports:
+      - "8761:8761"
+    restart: unless-stopped
+
+  config:
+    depends_on:
+      - discovery
