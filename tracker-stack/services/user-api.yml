@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  user-api:
+    image: user-api
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+
+  api-gateway:
+    depends_on:
+      - user-api

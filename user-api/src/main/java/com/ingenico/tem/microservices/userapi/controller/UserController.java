@@ -20,11 +20,9 @@ public class UserController {
 
     @GetMapping("/users")
     private List<User> findALl() {
-
         List<Series> someSeries = seriesClient.getSeries();
-
-        User user1 = new User("Ali", "OMAR",someSeries);
-        User user2 = new User("Yannick", "LECHEVIN",someSeries);
+        User user1 = new User("Ali", "OMAR", someSeries);
+        User user2 = new User("Yannick", "LECHEVIN", someSeries);
         return (Arrays.asList(user1, user2));
 
     }
